@@ -12,10 +12,24 @@ namespace DematicCodingQuestion.Models
     {
         [XmlElement("Operation ID")]
 
-        public string OperationId { get; set; }
+        public  Operator op { get; set; }
 
         [XmlElement("Value")]
         public List<double> Value { get; set; }
+
+    }
+
+    public enum Operator
+
+    {
+
+        Plus,
+
+        Subtraction,
+
+        Multiplication,
+
+        Division
 
     }
 }
