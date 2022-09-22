@@ -1,18 +1,17 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
 using DematicCodingQuestion.Models;
-
 using Newtonsoft.Json;
-using System.Reflection;
-using System.Text.RegularExpressions;
 using System.Xml;
 using System.Xml.Linq;
 
 
 Console.WriteLine("Hello, World!");
 
+//Calling main function
 MainFunction();
 
+//Main function for the user to input path and file 
 void MainFunction()
 {
 
@@ -44,6 +43,7 @@ void MainFunction()
 
 }
 
+//Math calculation which takes list of value and operation id as string to do the respective calculation and returns a double 
 double Calculator(string mathOperator, List<double> value)
 {
     double FinalValue = 0.00;
@@ -85,7 +85,8 @@ double Calculator(string mathOperator, List<double> value)
     return FinalValue;
 }
 
-    void XmlCalculator(string path)
+//Xml deserialize the given XML format to the object of MathsOperation 
+void XmlCalculator(string path)
     {
     try
     {
@@ -109,7 +110,7 @@ double Calculator(string mathOperator, List<double> value)
     }
 }
 
-
+//Json deserialize the given XML format to the object of Root
 void JsonCalculator(string path)
 {
     try
@@ -126,8 +127,7 @@ void JsonCalculator(string path)
         Console.WriteLine("Error occured while processing the file. Please check the error: " + ex.Message);
     }
 }
-
-
+//Take MathOperation as input, call the calculator function and also call the XMLGenerator to create XMl with calculated value
 void OperationCal(MathsOperation mathsOperation)
 {
     double firstNodeCalculation = Calculator(mathsOperation.Id, mathsOperation.Value);
@@ -150,7 +150,7 @@ void OperationCal(MathsOperation mathsOperation)
 
 }
 
-
+//XMLGenerator function which take finalvalue as input and generates a predefined XML document
 void XMLGenerator(double finalValue)
 {
     try
