@@ -1,35 +1,51 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
+using System.Globalization;
 using System.Xml.Serialization;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+
 
 namespace DematicCodingQuestion.Models
 {
-    [XmlRoot("Maths")]
-    public class Operations
+    public partial class Root
     {
-        [XmlElement("Operation ID")]
+        [JsonProperty("Maths")]
+        [XmlElement("Maths")]
+        public Maths Maths { get; set; }
+    }
 
-        public  Operator op { get; set; }
+    public partial class Maths
+    {
+        [JsonProperty("Operation")]
+        [XmlElement("Operation")]
+        public MathsOperation Operation { get; set; }
+    }
 
+    public partial class MathsOperation
+    {
+        [JsonProperty("@ID")]
+        [XmlElement("@ID")]
+        public string Id { get; set; }
+
+        [JsonProperty("Value")]
         [XmlElement("Value")]
         public List<double> Value { get; set; }
 
+        [JsonProperty("Operation")]
+        [XmlElement("Operation")]
+        public OperationOperation Operation { get; set; }
     }
 
-    public enum Operator
-
+    public partial class OperationOperation
     {
+        [JsonProperty("@ID")]
+        [XmlElement("@ID")]
+        public string Id { get; set; }
 
-        Plus,
-
-        Subtraction,
-
-        Multiplication,
-
-        Division
-
+        [JsonProperty("Value")]
+        [XmlElement("Value")]
+        public List<double> Value { get; set; }
     }
 }
