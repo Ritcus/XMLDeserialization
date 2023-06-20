@@ -16,8 +16,6 @@ Folder Structure:
 
 -Program.cs: Conatins all the main methods, including all the serialization and deserialization of the objects and calculations.
 
-Others (Did not had enough time to finish up, but tried to showcase my experience respective structure of an webapp)
-
 -Interface: Methods to be implemented.
 
 -Services: An extra layer of abstraction.
