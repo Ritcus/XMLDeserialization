@@ -24,7 +24,5 @@ Others (Did not had enough time to finish up, but tried to showcase my experienc
 
 -Controllers: For all the HTTP requests.  
 
-//Not enough experience on Unit test, so did not included any of the test here 
-
 Sample input file structure, also available inside assests folder.
 ![image](https://user-images.githubusercontent.com/89765315/191672245-f228645d-16d9-4c16-983b-2c32cea235de.png)
