@@ -1,14 +1,5 @@
 # XMLDeserialization
 
-Overview
-
-###Welcome to Dematic Assessment Repo.###
-
-Below is a practical coding question that is completed as a part of the application process from Dematic.
-Due to time constraints, the project has been done in a Console app. 
-
-**All the coding has been done in C#. Visual Studio 2022 is recommended for running the project. **
-
 ###INSTALL AND RUNNING PROCESS###
 
 -Clone the repository from Visual Studio 2022. 
